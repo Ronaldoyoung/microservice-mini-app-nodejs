@@ -7,11 +7,11 @@ app.use(bodyParser.json());
 
 const commentByPostsId = {};
 
-app.get("posts/:id/comments", (req, res) => {
+app.get("/posts/:id/comments", (req, res) => {
   res.send(commentByPostsId[req.params.id] || []);
 });
 
-app.post("posts/:id/comments", (req, res) => {
+app.post("/posts/:id/comments", (req, res) => {
   const commentId = randomBytes(4).toString("hex");
   const { content } = req.body;
 
