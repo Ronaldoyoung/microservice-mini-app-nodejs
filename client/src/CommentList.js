@@ -5,7 +5,6 @@ const CommentList = ({ comments }) => {
     let content;
 
     if (comment.status === "approved") {
-      console.log("111");
       content = comment.content;
     }
     if (comment.status === "pending") {
